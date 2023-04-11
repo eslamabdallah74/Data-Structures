@@ -8,10 +8,7 @@ $stack = new Stack();
 
 
 $popped = null;
-try {
-    $stack->pop($popped);
-} catch (\Throwable $th) {
-    echo $th->getMessage();
-}
+$stack->pop($popped);
+
 
 echo "Popped value is: $popped";
