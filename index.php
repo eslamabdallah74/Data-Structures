@@ -6,13 +6,12 @@ use Yomi\DataStructures\Stack;
 
 $stack = new Stack();
 
-$stack->push(1);
-$stack->push(2);
-$stack->push(3);
-
-$stack->print();
 
 $popped = null;
-$stack->pop($popped);
+try {
+    $stack->pop($popped);
+} catch (\Throwable $th) {
+    echo $th->getMessage();
+}
 
 echo "Popped value is: $popped";

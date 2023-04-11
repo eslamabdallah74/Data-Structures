@@ -2,7 +2,7 @@
 
 namespace Yomi\DataStructures;
 
-use RuntimeException;
+use Yomi\DataStructures\Exceptions\StackUnderflowException;
 
 // we want to have four things to get a stack data Structure 
 // 1- the top that will be -1 and start to be 0 as an index
@@ -51,7 +51,7 @@ class Stack
     public function pop(&$popped = null)
     {
         if ($this->isEmpty()) {
-            throw new RuntimeException('Stack is empty!');
+            throw new StackUnderflowException('Stack is empty, Cannot pop from empty stack!');
         } else {
             $popped = $this->stack[$this->top];
             $this->top--;
@@ -61,7 +61,7 @@ class Stack
     public function getTop()
     {
         if ($this->isEmpty()) {
-            throw new RuntimeException('Stack is empty!');
+            throw new StackUnderflowException('Stack is empty, Cannot pop from empty stack!');;
         } else {
             echo "Top is: [" . $this->stack[$this->top] . "]";
             echo "<br />";
