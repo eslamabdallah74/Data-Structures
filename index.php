@@ -1,14 +1,13 @@
 <?php
-
 require_once 'autoload.php';
 
-use Yomi\DataStructures\Stack;
-
-$stack = new Stack();
-
-
-$popped = null;
-$stack->pop($popped);
+use Yomi\DataStructures\LinkedList;
+use Yomi\DataStructures\Node;
 
 
-echo "Popped value is: $popped";
+$stack = new LinkedList();
+$stack->push('Eslam');
+$stack->push('Abdallah');
+$stack->push('abss');
+
+$stack->printLinkedListStack($stack);
