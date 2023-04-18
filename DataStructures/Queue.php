@@ -66,6 +66,5 @@ class Queue
             echo "Queue index number: " . $i . " Value is [" . $this->queueArray[$i] . "]";
             echo "<br >";
         }
-        // echo "Queue index number: " . $this->back . " Value is [" . $this->queueArray[$this->back] . "]";
     }
 }
